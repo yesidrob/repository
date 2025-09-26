@@ -1,0 +1,34 @@
+<odoo>
+   
+    <record id="view_saludo_form" model="ir.ui.view">
+        <field name="name">saludo.form</field>
+        <field name="model">modulo_boton_hola.saludo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                    </group>
+                    <footer>
+                        <!-- Botón que llama al método Python -->
+                        <button name="accion_imprimir_hola" 
+                                type="object" 
+                                string="Imprimir Hola" 
+                                class="btn-primary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_saludo" model="ir.actions.act_window">
+        <field name="name">Saludo</field>
+        <field name="res_model">modulo_boton_hola.saludo</field>
+        <field name="view_mode">list,form</field>  <!-- verificar tree por list, posiblemente cambio su uso en la version de odoo -->
+    </record>
+
+    <menuitem id="menu_saludo_root" name="Botón de Prueba"/>
+    <menuitem id="menu_saludo_modelo" name="Saludo" parent="menu_saludo_root" action="action_saludo"/>
+
+   
+</odoo>

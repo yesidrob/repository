@@ -1,0 +1,49 @@
+.excel-charts-container {
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.card {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 0.75rem 1.25rem;
+}
+
+.card-header h5 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Estilos para los gráficos de Plotly */
+.plotly-graph-div {
+    width: 100% !important;
+}
+
+/* Botón de importar */
+.o_import_excel {
+    padding: 8px 16px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.o_import_excel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.o_import_excel i {
+    margin-right: 8px;
+}

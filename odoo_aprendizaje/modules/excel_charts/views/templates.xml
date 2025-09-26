@@ -1,0 +1,44 @@
+
+<odoo>
+    <template id="excel_charts_template">
+        <t t-name="excel_charts.Template">
+            <div class="container-fluid">
+                <div class="row mb-3">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary o_import_excel">
+                            <i class="fa fa-upload"/> Importar Excel
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info" t-if="!widget.record_id">
+                    No hay datos cargados. Por favor importa un archivo Excel.
+                </div>
+                
+                <div class="row" t-if="widget.record_id">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="card-title mb-0">Gráfico de Torta</h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="pieChart" style="width: 100%; height: 400px;"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="card-title mb-0">Gráfico de Barras</h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="barChart" style="width: 100%; height: 400px;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

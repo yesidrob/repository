@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+        <record id="view_fields_for_view_tree" model="ir.ui.view">
+            <field name="name">fields.for.view.tree</field>
+            <field name="model">fields.for.view</field>
+            <field name="arch" type="xml">
+                <tree string="Fields for View">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="view"/>
+                    <field name="model"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_fields_for_view_form" model="ir.ui.view">
+            <field name="name">fields.for.view.form</field>
+            <field name="model">fields.for.view</field>
+            <field name="arch" type="xml">
+                <form string="Field for View">
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                        <field name="view"/>
+                        <field name="model"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_fields_for_view" model="ir.actions.act_window">
+            <field name="name">Fields for View</field>
+            <field name="res_model">fields.for.view</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_fields_for_view_root"
+                  name="Fields for View"
+                  parent="base.menu_custom"
+                  action="action_fields_for_view"
+                  sequence="10"/>
+    
+
+  </data>
+</odoo>

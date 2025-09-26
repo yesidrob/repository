@@ -1,0 +1,23 @@
+<odoo>
+    
+    <template id="template_grafica" name="Gráfica de Datos">
+        <t t-call="web.layout">
+            <div class="oe_structure">
+                <h2>Gráfica de Barras</h2>
+                <canvas id="graficaBarras" width="400" height="200"></canvas>
+            </div>
+            
+        <!-- Aquí cargamos Chart.js desde CDN -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <!-- Aquí cargamos nuestro JS de Odoo -->
+            <script type="text/javascript" src="/demo_local/static/src/js/grafica.js"></script>
+        </t>
+    </template>
+
+    <record id="action_grafica" model="ir.actions.act_url">
+        <field name="name">Gráfica</field>
+        <field name="url">/grafica</field>
+        <field name="target">self</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    
+    <record id="view_dato_form" model="ir.ui.view">
+        <field name="name">dato.form</field>
+        <field name="model">mi_modulo.dato</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="valor"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_dato_tree" model="ir.ui.view">
+        <field name="name">dato.list</field>
+        <field name="model">mi_modulo.dato</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="nombre"/>
+                <field name="valor"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_dato" model="ir.actions.act_window">
+        <field name="name">Datos</field>
+        <field name="res_model">mi_modulo.dato</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_grafica_root" name="Datos Gráfica"/>
+    <menuitem id="menu_grafica_datos" name="Ingresar Datos" parent="menu_grafica_root" action="action_dato"/>
+    <menuitem id="menu_ver_grafica" name="Ver Gráfica" parent="menu_grafica_root" action="action_grafica"/>
+
+
+
+  </data>
+</odoo>
